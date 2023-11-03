@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .searchBox {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+  }
+  
