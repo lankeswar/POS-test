@@ -7,6 +7,7 @@ import OrderView from './components/OrederView/OrderView';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import styles from './App.module.css'
+import './AppGlobal.css'
 
 import Home from "./Pages/Home/Home";
 import Menu from "./Pages/Menu/Menu";
