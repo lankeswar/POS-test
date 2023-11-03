@@ -1,17 +1,32 @@
 // import React from "react"
 import styles from "./Header.module.css"
+import React, { useState, useEffect } from "react"
 
 function Header() {
 	// Function to format the current date
-	const formatDate = () => {
+	const formatDateTime = () => {
 		const options = {
 			year: "numeric",
 			month: "long",
 			day: "numeric",
+			hour: "numeric",
+			minute: "numeric",
 		}
 		const today = new Date()
 		return today.toLocaleDateString("en-US", options)
 	}
+
+	const [currentDateTime, setCurrentDateTime] = useState(formatDateTime())
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentDateTime(formatDateTime())
+		}, 60000) // Update every minute (60000 milliseconds)
+
+		return () => clearInterval(interval) // Cleanup the interval on unmount
+	}, [])
+
+	formatDateTime
 
 	const headerStyle = {
 		backgroundColor: "#3498db", // Example primary color
@@ -20,21 +35,22 @@ function Header() {
 	const restaurantNameStyle = {
 		fontSize: "30px",
 		fontWeight: "bold",
-    fontFamily: 'Arial, sans-serif', // Change the font family
+		fontFamily: "Varela Round, sans-serif", // Change the font family
 		// color: "#e74c3c", // Example secondary color
 	}
 
+	const getColor = (index) => {
+		// Define your colors here
+		const colors = ["blue", "orange", "green"] // Add more colors if needed
 
-  const getColor = (index) => {
-    // Define your colors here
-    const colors = ['blue', 'orange', 'green']; // Add more colors if needed
-  
-    return colors[index % colors.length];
-  };
-  
-  const coloredLetters = Array.from('POS').map((letter, index) => (
-    <span key={index} style={{ color: getColor(index) }}>{letter}</span>
-  ));
+		return colors[index % colors.length]
+	}
+
+	const coloredLetters = Array.from("POS").map((letter, index) => (
+		<span key={index} style={{ color: getColor(index) }}>
+			{letter}
+		</span>
+	))
 
 	const searchIconStyle = {
 		fontSize: "18px", // Decrease the icon size
@@ -50,18 +66,14 @@ function Header() {
 	return (
 		<header className={styles.header} style={headerStyle}>
 			<div style={restaurantNameStyle}>{coloredLetters}</div>
-			
 
 			<div className={styles.searchBox}>
 				<i className="fas fa-search" style={searchIconStyle}></i>{" "}
 				{/* Use 'fas' for solid style */}
-				<input
-					type="text"
-					placeholder="Search for items..."
-				/>
+				<input type="text" placeholder="Search Products or any order..." />
 			</div>
 			<div className={styles.dateTime} style={dateTimeStyle}>
-				Today: {formatDate()}
+				{currentDateTime}
 			</div>
 		</header>
 	)
