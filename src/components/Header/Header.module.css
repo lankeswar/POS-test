@@ -16,3 +16,10 @@
     position: relative;
   }
   
+  .searchBox input[type="text"] {
+    width: 30%; /* Input field takes full width of the container */
+    border: none; /* No border for the input field */
+    outline: none; /* Remove default input focus outline */
+    border-radius: 8px; /* Rounded corners for the input field */
+    padding: 6px; /* Add padding inside the input field */
+  }
