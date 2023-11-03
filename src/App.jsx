@@ -1,8 +1,12 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
+import OrderView from './components/OrederView/OrderView';
+
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import styles from './App.module.css'
 
 import Home from "./Pages/Home/Home";
 import Menu from "./Pages/Menu/Menu";
@@ -14,13 +18,13 @@ import Settings from './Pages/Settings/Settings';
 
 function App() {
   return (
-    <div className="mainContainer">
+    <div className={styles.mainContainer}>
       <Header />
-      <div className="contentContainer">
-        <div className="navbar">
+      <div className={styles.contentContainer}>
+        <div className={styles.navbar}>
           <Navbar />
         </div>
-        <div className="content">
+        <div className={styles.content}>
           {/* Add your content components here */}
           <Routes>
             {/* Define your routes and corresponding components */}
@@ -31,6 +35,10 @@ function App() {
             <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
+        <div className={styles.orderView}>
+          <OrderView />
+        </div>
+        
       </div>
     </div>
   );
