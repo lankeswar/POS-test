@@ -1,3 +1,17 @@
 body{
     margin: 0;
+    background-image: url("/images/Background.png");
 }
+::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgb(13, 54, 16);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(136, 213, 48, 0.753);
+  }
+  

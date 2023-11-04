@@ -40,6 +40,62 @@ const FoodList = () => {
 				image: "/images/f4.jpeg",
 				price: 7.99,
 			},
+            {
+				id: 5,
+				name: "Pizza",
+				category: "Italian food",
+				image: "/images/f1.jpeg",
+				price: 10.99,
+			},
+			{
+				id: 6,
+				name: "Hamburger",
+				category: "American food",
+				image: "/images/f2.jpeg",
+				price: 8.99,
+			},
+			{
+				id: 7,
+				name: "Sushi",
+				category: "Japanese food",
+				image: "/images/f3.jpeg",
+				price: 12.99,
+			},
+			{
+				id: 8,
+				name: "Salad",
+				category: "Healthy food",
+				image: "/images/f4.jpeg",
+				price: 7.99,
+			},
+            {
+				id: 9,
+				name: "Pizza",
+				category: "Italian food",
+				image: "/images/f1.jpeg",
+				price: 10.99,
+			},
+			{
+				id: 10,
+				name: "Hamburger",
+				category: "American food",
+				image: "/images/f2.jpeg",
+				price: 8.99,
+			},
+			{
+				id: 11,
+				name: "Sushi",
+				category: "Japanese food",
+				image: "/images/f3.jpeg",
+				price: 12.99,
+			},
+			{
+				id: 12,
+				name: "Salad",
+				category: "Healthy food",
+				image: "/images/f4.jpeg",
+				price: 7.99,
+			},
 		])
 	}
 

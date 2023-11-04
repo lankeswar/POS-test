@@ -1,5 +1,6 @@
 import styles from "./Home.module.css"
 import FoodCard from "../../components/FoodCard/FoodCard"
+
 export default function Home() {
 	return (
 		<>
