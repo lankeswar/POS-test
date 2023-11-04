@@ -1,0 +1,12 @@
+.food_container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  
+ .food_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4px;
+  }
+  
