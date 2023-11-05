@@ -1,35 +1,34 @@
-import { Link } from 'react-router-dom';
-import styles from './OrderView.module.css';
+import styles from "./OrderView.module.css"
+import PeopleOutlineOutlinedIcon from "@mui/icons-material/PeopleOutlineOutlined"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function OrderView() {
-  return (
-    <div className={styles.order_view}>
-      <h1>ORDER #</h1>
-      <h2>Guest:</h2>
-      <hr></hr>
+	return (
+		<div className={styles.order_view}>
+			<h2>ORDER #</h2>
 
-      <Link to="/" className={styles.orderItem}>
-        <i className="fas fa-home"></i>
-        <span>Home</span>
-      </Link>
-      <Link to="/menu" className={styles.orderItem}>
-        <i className="fas fa-utensils"></i>
-        <span>Menu</span>
-      </Link>
-      <Link to="/payment" className={styles.orderItem}>
-        <i className="fas fa-credit-card"></i>
-        <span>Payment</span>
-      </Link>
-      <Link to="/orders" className={styles.orderItem}>
-        <i className="fas fa-list-alt"></i>
-        <span>Orders</span>
-      </Link>
-      <Link to="/settings" className={styles.orderItem}>
-        <i className="fas fa-cogs"></i>
-        <span>Settings</span>
-      </Link>
-    </div>
-  );
+			<h2 className={styles.guesth2}>
+				<PeopleOutlineOutlinedIcon /> Guest:{" "}
+				<span style={{ color: "red" }}>3</span>
+			</h2>
+
+			<hr style={{ border: "1px solid grey", width: "100%" }} />
+
+			<div className="current_orderList">
+				Noodles <br /> Momo
+			</div>
+			<hr style={{ border: "1px solid grey", width: "100%" }} />
+
+			<div className={styles.billing}>
+				<div className="order_total">
+					Subtotal <br /> Service Charge 10%
+				</div>
+				<hr style={{ border: "1px solid grey", width: "100%" }} />
+				<h1>Total</h1>
+				<button className="btn btn-danger">Cancel Order</button>
+			</div>
+		</div>
+	)
 }
 
-export default OrderView;
+export default OrderView

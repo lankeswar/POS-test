@@ -1,6 +1,10 @@
 // import React from "react"
 import styles from "./Header.module.css"
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
+import TodayOutlinedIcon from "@mui/icons-material/TodayOutlined"
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined"
+import InputAdornment from "@material-ui/core/InputAdornment"
+import TextField from "@material-ui/core/TextField"
 
 function Header() {
 	// Function to format the current date
@@ -27,10 +31,6 @@ function Header() {
 	}, [])
 
 	formatDateTime
-
-	const headerStyle = {
-		backgroundColor: "#3498db", // Example primary color
-	}
 
 	const restaurantNameStyle = {
 		fontSize: "30px",
@@ -64,16 +64,27 @@ function Header() {
 	}
 
 	return (
-		<header className={styles.header} style={headerStyle}>
+		<header className={styles.header}>
 			<div style={restaurantNameStyle}>{coloredLetters}</div>
 
 			<div className={styles.searchBox}>
 				<i className="fas fa-search" style={searchIconStyle}></i>{" "}
 				{/* Use 'fas' for solid style */}
-				<input type="text" placeholder="Search Products or any order..." />
+				{/* <input type="text" placeholder="Search Products or any order..." /> */}
+				<TextField
+					placeholder="Search Products or any order..."
+					InputProps={{
+						startAdornment: (
+							<InputAdornment position="start">
+								<SearchOutlinedIcon />
+							</InputAdornment>
+						),
+					}}
+				/>
 			</div>
 			<div className={styles.dateTime} style={dateTimeStyle}>
-				{currentDateTime}
+				<TodayOutlinedIcon />
+				<span>{currentDateTime}</span>
 			</div>
 		</header>
 	)

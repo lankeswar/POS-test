@@ -1,0 +1,9 @@
+.images{
+    overflow: hidden;
+    max-width: 60vh;
+}
+.text{
+    display: flex;
+	align-items: center;
+
+}

@@ -1,8 +1,9 @@
 import FoodList from '../../components/FoodList/FoodList'
-
+import CatagoryButton from '../../components/CatagoryButton/CatagoryButton'
 export default function Menu(){
-    return(<>
-        <h1>Menu </h1>
+    return(<>       
         <FoodList/>
+        <CatagoryButton/>
+        
     </>)
 }   
