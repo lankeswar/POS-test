@@ -2,7 +2,7 @@ import UnderConstruction from '../../components/UnderConstruction/UnderConstruct
 
 export default function Orders(){
     return(<>
-        <h1>Orders</h1>
+        <h1>Orders Details and Reversal request of order</h1>
         <UnderConstruction/>
     </>)
 }

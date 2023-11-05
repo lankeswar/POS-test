@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function OrderView() {
 	return (
 		<div className={styles.order_view}>
-			<h1>ORDER #</h1>
+			<h2>ORDER #</h2>
 
 			<h2 className={styles.guesth2}>
 				<PeopleOutlineOutlinedIcon /> Guest:{" "}
